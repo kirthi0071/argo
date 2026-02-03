@@ -4,12 +4,19 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-  - deployment.yaml
-  - service.yaml
+  - todo/deployment.yaml
+  - todo/service.yaml
+  - welcome/deployment.yaml
+  - welcome/service.yaml
 
 configMapGenerator:
   - name: todo-web-content
     files:
-      - web/index.html
-      - web/style.css
-      - web/app.js
+      - todo/web/index.html
+      - todo/web/style.css
+      - todo/web/app.js
+
+  - name: welcome-web-content
+    files:
+      - welcome/web/index.html
+      - welcome/web/style.css
