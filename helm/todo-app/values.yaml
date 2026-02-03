@@ -10,6 +10,3 @@ service:
 
 nodeSelector:
   kubernetes.io/hostname: gke-cluster-1-default-pool-477a13ea-f25w
-
-configmap:
-  name: todo-web-content
