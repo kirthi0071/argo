@@ -22,8 +22,7 @@ spec:
           image: nginx:1.25
           ports:
             - containerPort: 80
-
-      volumeMounts:
+          volumeMounts:
             - name: todo-volume
               mountPath: /usr/share/nginx/html
 
