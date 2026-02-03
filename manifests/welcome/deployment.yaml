@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: welcome-app
-  namespace: default
 spec:
   replicas: 1
   selector:
@@ -22,3 +21,11 @@ spec:
           image: nginx:1.25
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: welcome-volume
+              mountPath: /usr/share/nginx/html
+
+      volumes:
+        - name: welcome-volume
+          configMap:
+            name: welcome-web-content
