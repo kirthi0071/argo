@@ -9,4 +9,4 @@ service:
   port: 80
 
 nodeSelector:
-  kubernetes.io/hostname: gke-cluster-1-default-pool-477a13ea-f25w
+  kubernetes.io/hostname: gke-cluster-1-node-1-6df7b73c-nsr8
